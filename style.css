@@ -1,0 +1,114 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, skyblue, cornflowerblue);
+    overflow: hidden;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#title {
+    margin-left: 75vh;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 35vh; 
+    color: coral;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#score {
+    top: 0%;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.diff {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cloud {
+    position: absolute;
+    left: 0;
+    background-color: white;
+    border-radius: 1000px;
+    animation: zoomies 5s infinite linear;
+    z-index: -1;
+}
+
+.cloud::before  {
+    content: '';
+    position: absolute;
+    top: -80%;
+    left: 10%;
+    width: 50%;
+    height: 150%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cloud::after  {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: 20%;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cloud.one {
+    top: 50%;
+    width: 300px;
+    height: 125px;
+}
+
+.cloud.two {
+    top: 30%;
+    width: 60px;
+    height: 20px;
+    animation-duration: 12s;
+}
+
+.cloud.tree {
+    top: 10%;
+    width: 120px;
+    height: 60px;
+    animation-duration: 8s;
+}
+
+.cloud.four {
+    top: 85%;
+    width: 120px;
+    height: 60px;
+    animation-duration: 7s;
+}
+
+@keyframes zoomies {
+    from {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        left: 100%;
+        transform: translateX(0%);
+    }
+}
